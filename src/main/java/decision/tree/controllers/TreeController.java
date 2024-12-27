@@ -26,36 +26,30 @@ public class TreeController {
     }
 
     private void drawTree(Pane pane, Node node, double x, double y, double width) {
-        // Draw the node's text
         Text nodeText = new Text(x, y, node.feature);
         pane.getChildren().add(nodeText);
 
         if (node.dataset == null) {
-            // Leaf node: no children to draw
             return;
         }
 
-        double childY = y + 100; // Vertical spacing between levels
+        double childY = y + 100;
         double totalWidth = calculateSubtreeWidth(node);
-        double startX = x - totalWidth / 2; // Center the subtree
+        double startX = x - totalWidth / 2;
 
         for (String edgeLabel : node.children.keySet()) {
             Node child = node.children.get(edgeLabel);
             double childWidth = calculateSubtreeWidth(child);
-            double childX = startX + childWidth / 2; // Center child node
+            double childX = startX + childWidth / 2;
 
-            // Draw the edge (line) to the child
             Line line = new Line(x, y + 10, childX, childY - 10);
             pane.getChildren().add(line);
 
-            // Add the edge label
             Text edgeText = new Text((x + childX) / 2, (y + childY) / 2 - 10, edgeLabel);
             pane.getChildren().add(edgeText);
 
-            // Recursively draw the child node
             drawTree(pane, child, childX, childY, childWidth);
 
-            // Shift startX for the next child
             startX += childWidth;
         }
     }
