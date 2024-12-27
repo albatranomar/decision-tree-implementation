@@ -41,4 +41,8 @@ This project implements a Decision Tree algorithm from scratch, focusing on the 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/decision-tree-learning.git
-```
+   ```
+
+![Landing](https://raw.githubusercontent.com/albatranomar/decision-tree-implementation/refs/heads/master/src/main/resources/images/landing.png?token=GHSAT0AAAAAACK2ZZCFIWAU377OZAE53SDGZ3ONU4A)
+![Tree](https://raw.githubusercontent.com/albatranomar/decision-tree-implementation/refs/heads/master/src/main/resources/images/tree.png?token=GHSAT0AAAAAACK2ZZCFR3PH4J7EHJGB46HWZ3ONVGA)
+
