@@ -85,7 +85,7 @@ public class LandingController {
 
         tree = root;
 
-        int[][] m = DecisionTree.confusionMatrix(targetClass, root, test_dataset);
+        int[][] m = DecisionTree.confusionMatrix(targetClass, root, dataset, test_dataset);
 
         StringBuilder builder = new StringBuilder();
         for (int[] r: m) {
@@ -118,7 +118,7 @@ public class LandingController {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Tree.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) cbClasses.getScene().getWindow();
+        Stage stage = new Stage();
 
         stage.setTitle("Tree!");
         stage.setScene(scene);

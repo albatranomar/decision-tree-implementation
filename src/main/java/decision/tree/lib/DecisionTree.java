@@ -3,8 +3,8 @@ package decision.tree.lib;
 import java.util.*;
 
 public class DecisionTree {
-    public static int[][] confusionMatrix(String targetClass, Node tree, HashMap<String, List<String>> testData) {
-        List<String> possiblePredictions = getPossibleValues(targetClass, testData);
+    public static int[][] confusionMatrix(String targetClass, Node tree, HashMap<String, List<String>> originalDataset, HashMap<String, List<String>> testData) {
+        List<String> possiblePredictions = getPossibleValues(targetClass, originalDataset);
         HashMap<String, Integer> predictionMap = new HashMap<>();
         for (int i = 0; i < possiblePredictions.size(); i++) {
             predictionMap.put(possiblePredictions.get(i), i);

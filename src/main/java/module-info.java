@@ -4,6 +4,7 @@ module decision.tree {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens decision.tree to javafx.fxml;
     exports decision.tree;
