@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+
+<ScrollPane hbarPolicy="ALWAYS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1024.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="decision.tree.controllers.TreeController">
+   <content>
+      <Pane fx:id="pane" minHeight="768.0" minWidth="1024.0" prefHeight="200.0" />
+   </content>
+</ScrollPane>
